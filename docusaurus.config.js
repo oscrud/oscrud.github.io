@@ -3,10 +3,10 @@ module.exports = {
     title: "Oscrud",
     tagline: "Golang Restful API Wrapper Framework",
     url: "https://oscrud.github.io",
-    baseUrl: "/docs",
-    favicon: "static/image/favicon.png",
     organizationName: "oscrud",
     projectName: "docs",
+    baseUrl: "/",
+    favicon: "static/image/favicon.png",
     plugins: [path.resolve(__dirname, "./node_modules/docusaurus-lunr-search/")],
     themeConfig: {
         navbar: {
