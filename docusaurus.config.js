@@ -2,7 +2,7 @@ const path = require("path");
 module.exports = {
     title: "Oscrud",
     tagline: "Golang Restful API Wrapper Framework",
-    url: "https://oscrud.github.io",
+    url: "https://oscrud.github.io/docs",
     organizationName: "oscrud",
     projectName: "docs",
     baseUrl: "/",
