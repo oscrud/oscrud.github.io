@@ -5,7 +5,7 @@ module.exports = {
     url: "https://oscrud.github.io/docs",
     organizationName: "oscrud",
     projectName: "docs",
-    baseUrl: "/",
+    baseUrl: "/docs",
     favicon: "static/image/favicon.png",
     plugins: [path.resolve(__dirname, "./node_modules/docusaurus-lunr-search/")],
     themeConfig: {
@@ -45,7 +45,6 @@ module.exports = {
                     showLastUpdateTime: true,
                 },
                 blog: {
-                    blogSidebarTitle: { default: 'Recent posts', all: 'All blog posts' },
                     showReadingTime: true,
                     editUrl:
                         "https://github.com/oscrud/docs/edit/master/blog/",
