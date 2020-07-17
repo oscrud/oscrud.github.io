@@ -2,10 +2,10 @@ const path = require("path");
 module.exports = {
     title: "Oscrud",
     tagline: "Golang Restful API Wrapper Framework",
-    url: "https://oscrud.github.io/docs",
+    url: "https://oscrud.github.io",
     organizationName: "oscrud",
     projectName: "docs",
-    baseUrl: "/docs",
+    baseUrl: "/docs/",
     favicon: "static/image/favicon.png",
     plugins: [path.resolve(__dirname, "./node_modules/docusaurus-lunr-search/")],
     themeConfig: {
@@ -13,7 +13,7 @@ module.exports = {
             logo: {
                 alt: "Oscrud",
                 src: "static/image/favicon.png",
-                href: "/docs/home",
+                href: "docs/home",
                 width: "800px",
             },
             links: [
