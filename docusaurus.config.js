@@ -6,13 +6,13 @@ module.exports = {
     organizationName: "oscrud",
     projectName: "docs",
     baseUrl: "/docs/",
-    favicon: "static/image/favicon.png",
+    favicon: "image/favicon.png",
     plugins: [path.resolve(__dirname, "./node_modules/docusaurus-lunr-search/")],
     themeConfig: {
         navbar: {
             logo: {
                 alt: "Oscrud",
-                src: "static/image/favicon.png",
+                src: "image/favicon.png",
                 href: "docs/home",
                 width: "800px",
             },
