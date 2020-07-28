@@ -13,7 +13,7 @@ module.exports = {
             logo: {
                 alt: "Oscrud",
                 src: "image/favicon.png",
-                href: "docs/introduction",
+                href: "/",
                 width: "800px",
             },
             links: [
