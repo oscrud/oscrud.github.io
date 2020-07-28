@@ -13,7 +13,7 @@ module.exports = {
             logo: {
                 alt: "Oscrud",
                 src: "image/favicon.png",
-                href: "docs/home",
+                href: "docs/introduction",
                 width: "800px",
             },
             links: [
@@ -46,8 +46,6 @@ module.exports = {
                 },
                 blog: {
                     showReadingTime: true,
-                    editUrl:
-                        "https://github.com/oscrud/docs/edit/master/blog/",
                 },
             },
         ],
