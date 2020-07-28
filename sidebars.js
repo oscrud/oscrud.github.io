@@ -1,3 +1,12 @@
 module.exports = {
-    someSidebar: {},
+    defaultSidebar: [
+        'introduction',
+        'getting-start',
+        {
+            "Oscrud Server": [
+                "server/overview",
+                "server/new-oscrud",
+            ],
+        },
+    ],
 };

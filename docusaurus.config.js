@@ -18,7 +18,7 @@ module.exports = {
             },
             links: [
                 {
-                    to: "docs/home",
+                    to: "docs/introduction",
                     label: "Docs",
                     position: "right",
                 },
