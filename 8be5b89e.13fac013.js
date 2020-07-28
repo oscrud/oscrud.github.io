@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[33],{169:function(o){o.exports=JSON.parse('{"oscrud":{"allTagsPath":"/blog/tags","slug":"oscrud","name":"oscrud","count":1,"permalink":"/blog/tags/oscrud"}}')}}]);
