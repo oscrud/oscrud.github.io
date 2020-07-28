@@ -60,4 +60,4 @@ jobs:
           else
           npm i
           fi
-          npx docusaurus deploy
+          CURRENT_BRANCH=${{ secrets.CURRENT_BRANCH }} DEPLOYMENT_BRANCH=${{ secrets.DEPLOYMENT_BRANCH }} npx docusaurus deploy
