@@ -1,5 +1,11 @@
 ---
-title: Registering Endpoints
+title: Register Endpoint
+sidebar_label: Register Endpoint
+keywords:
+- documentation
+- oscrud
+- endpoint
+description: register endpoint to oscrud server
 ---
 
 For registering endpoint with specified method, endpoint & handler, and also able to apply endpoint level options ( mean only work on the specifed endpoint ).

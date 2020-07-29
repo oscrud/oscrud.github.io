@@ -1,5 +1,12 @@
 ---
 title: Getting Started
+sidebar_label: Getting Started
+keywords:
+- documentation
+- oscrud
+- getting start
+- example
+description: getting start and example of oscrud server
 ---
 
 If you doesn't have *Go* installed on your pc. You can get it [here](https://golang.org/doc/install).

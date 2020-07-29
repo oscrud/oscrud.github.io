@@ -1,5 +1,12 @@
 ---
 title: Response Context
+sidebar_label: Response Context
+keywords:
+- documentation
+- oscrud
+- handler
+- response
+description: oscrud response context object
 ---
 
 | Method                                                      | Description                                                                                                                                           |

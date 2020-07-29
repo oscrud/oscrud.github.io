@@ -1,5 +1,10 @@
 ---
 title: Start Server
+sidebar_label: Start Server
+keywords:
+- documentation
+- oscrud
+description: start oscrud server
 ---
 
 For start the oscrud server, server starting will only start all the registered transport. No transported registered will panic with err. No any setup will be invoke at this step, all would be done when `register`, so internal call / access can be work before or even not calling `Start()`.

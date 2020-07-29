@@ -1,5 +1,12 @@
 ---
 title: Request Lifecycle
+sidebar_label: Request Lifecycle
+keywords:
+- documentation
+- oscrud
+- request
+- lifecycle
+description: request lifecycle for oscrud server
 ---
 
 Basically a request firstly will come to Transport. Transport will do the basic handling to construct a `oscrud.Request` and only bring request to `oscrud`. 

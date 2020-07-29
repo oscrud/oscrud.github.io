@@ -1,5 +1,12 @@
 ---
-title: Defining Data Model
+title: Defining Model
+sidebar_label: Defining Model
+keywords:
+- documentation
+- oscrud
+- service
+- model
+description: defining model for service of oscrud server
 ---
 
 Service model is a model struct usually will be a table from database. Service model must have implmenet method from `oscrud.DataModel`. So when creating own service, we can use method to filter result or returning data even prevent toxic data injection. `$id` tag will automatically assign input value from endpoint, such as `GET /test/:$id` for a `Get` action.

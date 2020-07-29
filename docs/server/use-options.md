@@ -1,5 +1,12 @@
 ---
 title: Using Options
+sidebar_label: Using Options
+keywords:
+- documentation
+- oscrud
+- options
+- middleware
+description: register options to oscrud server
 ---
 
 For apply server-level options ( mean apply to all endpoints ).

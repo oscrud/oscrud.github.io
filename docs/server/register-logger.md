@@ -1,5 +1,11 @@
 ---
-title: Registering Loggers
+title: Register Logger
+sidebar_label: Register Logger
+keywords:
+- documentation
+- oscrud
+- logger
+description: register logger to oscrud server
 ---
 
 For register logger for the server. Every request made will be run all logger in goroutine, prevent for slowing down requests.

@@ -1,5 +1,11 @@
 ---
 title: Specific Binding
+sidebar_label: Specific Binding
+keywords:
+- documentation
+- oscrud
+- binder
+description: oscrud binder bind specific data
 ---
 
 Specific binding will bind value based on specified tag. If you want to bind from all with specified key, you can use all binding instead of specific binding. Binding struct when calling must have addressable, if not will return error `ErrSourceNotAddressable`.

@@ -1,8 +1,14 @@
 ---
-title: Registering Services
+title: Register Service
+sidebar_label: Register Service
+keywords:
+- documentation
+- oscrud
+- service
+description: register service to oscrud server
 ---
 
-For registering service on a specified path, basically service would includes 6 endpoints. It's have same registering strategy with endpoint.
+For registering service on a specified path, basically service would includes 6 endpoints. It's have same registering strategy with endpoint. You can disable some of the api by passing service options.
 
 
 * GET /basePath - Service.Find
@@ -40,6 +46,6 @@ func main() {
     service := sqlike.NewService(client).Database("test")
 
     // User is a query model struct based on oscrud.DataModel interface
-	server.RegisterService("test", service.ToService("user", new(User)), middleware)
+	server.RegisterService("test", service.ToService("user", new(User)), new(oscrud.ServiceOptions), middleware)
 }
 ```

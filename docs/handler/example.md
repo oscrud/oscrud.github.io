@@ -1,12 +1,18 @@
 ---
-title: Example Handler
+title: Example
+sidebar_label: Example
+keywords:
+- documentation
+- oscrud
+- handler
+description: example of oscrud handler
 ---
 
-For endpoint, must have a handler that calling `End()` method, if not will throwing error due to context haven't end yet. Why with this design, because of we make handler can be invoke until `After` middleware options and can be apply for profiler, logger about `context`.
+You can customize some builder to build handler, there's an example with [graphql](https://github.com/oscrud/graphql-handler).
 
 ```go
 func Example(ctx oscrud.Context) oscrud.Context {
-    return ctx.String(200, "Example Handler").End()
+    return ctx.String(200, "Example Handler")
 }
 
 func main() {

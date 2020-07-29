@@ -1,5 +1,12 @@
 ---
 title: Creating Own Oscrud Service
+sidebar_label: Creating Own Oscrud Service
+keywords:
+- documentation
+- oscrud
+- service
+- customization
+description: custom service for oscrud server
 ---
 
 For creating own service, you must have implement methods based on `oscrud.Service` interface. There built in have 2 Query Struct ( `oscrud.Query`, `oscrud.QueryOne` ) for `bind` data from incoming requests, mainly for standardize query naming.

@@ -1,5 +1,11 @@
 ---
-title: Registering New Binder
+title: Register Binder
+sidebar_label: Register Binder
+keywords:
+- documentation
+- oscrud
+- binder
+description: register new binder to oscrud binder
 ---
 
 Registering new binder for sepcific type ( struct, array or slice ), primitive not supported yet. 

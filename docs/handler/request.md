@@ -1,5 +1,12 @@
 ---
 title: Request Context
+sidebar_label: Request Context
+keywords:
+- documentation
+- oscrud
+- handler
+- request
+description: oscrud request context object
 ---
 
 | Method                                  | Description                                                                                                                                           |
@@ -9,6 +16,7 @@ title: Request Context
 | Context() context.Context               | Get request context                                                                                                                                   |
 | Transport() TransportID                 | Get transport name                                                                                                                                    |
 | Path() string                           | Return request path                                                                                                                                   |
+| Host() string                           | Return request host                                                                                                                                   |
 | RequestID() string                      | Return request id                                                                                                                                     |
 | State() map[string]interface{}          | Return request state                                                                                                                                  |
 | Headers() map[string]string             | Return request headers                                                                                                                                |
