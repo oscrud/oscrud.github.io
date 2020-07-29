@@ -6,16 +6,16 @@
 <meta name="generator" content="Docusaurus v2.0.0-alpha.58">
 <title data-react-helmet="true">Defining Model | Oscrud</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="Defining Model | Oscrud"><meta data-react-helmet="true" name="description" content="defining model for service of oscrud server"><meta data-react-helmet="true" property="og:description" content="defining model for service of oscrud server"><meta data-react-helmet="true" name="keywords" content="documentation,oscrud,service,model"><meta data-react-helmet="true" property="og:url" content="https://oscrud.github.io/docs/service/data-model"><link data-react-helmet="true" rel="shortcut icon" href="/image/favicon.png"><link data-react-helmet="true" rel="canonical" href="https://oscrud.github.io/docs/service/data-model"><link rel="stylesheet" href="/styles.0358fa2b.css">
 <link rel="preload" href="/styles.f917564b.js" as="script">
-<link rel="preload" href="/runtime~main.16bf4317.js" as="script">
-<link rel="preload" href="/main.d1d72ca9.js" as="script">
-<link rel="preload" href="/1.2f5b56ac.js" as="script">
-<link rel="preload" href="/2.2ba76af6.js" as="script">
-<link rel="preload" href="/3.b6dd0acc.js" as="script">
-<link rel="preload" href="/1be78505.f2201b16.js" as="script">
-<link rel="preload" href="/61.82a131c0.js" as="script">
+<link rel="preload" href="/runtime~main.cef3a638.js" as="script">
+<link rel="preload" href="/main.a143547b.js" as="script">
+<link rel="preload" href="/1.52b5f39d.js" as="script">
+<link rel="preload" href="/2.945fca5f.js" as="script">
+<link rel="preload" href="/3.4d772ecf.js" as="script">
+<link rel="preload" href="/1be78505.d560655a.js" as="script">
+<link rel="preload" href="/63.6497fbf7.js" as="script">
 <link rel="preload" href="/20ac7829.8f5d5e3c.js" as="script">
-<link rel="preload" href="/17896441.c298857e.js" as="script">
-<link rel="preload" href="/89d6aa73.ac892fb8.js" as="script">
+<link rel="preload" href="/17896441.ae4ae534.js" as="script">
+<link rel="preload" href="/89d6aa73.35bf0d6f.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=window.matchMedia("(prefers-color-scheme: dark)"),n=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();null!==n?t(n):e.matches&&t("dark")}()</script><div id="__docusaurus">
@@ -29,15 +29,15 @@
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">// ToUpdate :</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token keyword" style="font-style:italic">func</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain">user </span><span class="token operator" style="color:rgb(137, 221, 255)">*</span><span class="token plain">User</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token function" style="color:rgb(130, 170, 255)">ToUpdate</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain">incoming oscrud</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token plain">ServiceModel</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token keyword" style="font-style:italic">interface</span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token builtin" style="color:rgb(130, 170, 255)">error</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    incomingUser </span><span class="token operator" style="color:rgb(137, 221, 255)">:=</span><span class="token plain"> incoming</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token operator" style="color:rgb(137, 221, 255)">*</span><span class="token plain">User</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    user</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token plain">Name </span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token plain"> incomingUser</span><span class="token punctuation" style="color:rgb(199, 146, 234)">.</span><span class="token plain">Name</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token keyword" style="font-style:italic">return</span><span class="token plain"> user</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token boolean" style="color:rgb(255, 88, 116)">nil</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">// ToDelete :</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token keyword" style="font-style:italic">func</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token plain">user </span><span class="token operator" style="color:rgb(137, 221, 255)">*</span><span class="token plain">User</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token function" style="color:rgb(130, 170, 255)">ToDelete</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token keyword" style="font-style:italic">interface</span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token builtin" style="color:rgb(130, 170, 255)">error</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token keyword" style="font-style:italic">return</span><span class="token plain"> user</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token boolean" style="color:rgb(255, 88, 116)">nil</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span></div></div></div></div></div></div></article><div class="margin-vert--xl"><div class="row"><div class="col"></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-07-29T13:48:41.000Z" class="docLastUpdatedAt_1sqk">7/29/2020</time> by <strong>Oskang09</strong></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/service/create-own-service"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Creating Own Oscrud Service</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/transport/overview"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Overview »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"></div></div></div></div></main></div></div></div>
 <script src="/styles.f917564b.js"></script>
-<script src="/runtime~main.16bf4317.js"></script>
-<script src="/main.d1d72ca9.js"></script>
-<script src="/1.2f5b56ac.js"></script>
-<script src="/2.2ba76af6.js"></script>
-<script src="/3.b6dd0acc.js"></script>
-<script src="/1be78505.f2201b16.js"></script>
-<script src="/61.82a131c0.js"></script>
+<script src="/runtime~main.cef3a638.js"></script>
+<script src="/main.a143547b.js"></script>
+<script src="/1.52b5f39d.js"></script>
+<script src="/2.945fca5f.js"></script>
+<script src="/3.4d772ecf.js"></script>
+<script src="/1be78505.d560655a.js"></script>
+<script src="/63.6497fbf7.js"></script>
 <script src="/20ac7829.8f5d5e3c.js"></script>
-<script src="/17896441.c298857e.js"></script>
-<script src="/89d6aa73.ac892fb8.js"></script>
+<script src="/17896441.ae4ae534.js"></script>
+<script src="/89d6aa73.35bf0d6f.js"></script>
 </body>
 </html>
