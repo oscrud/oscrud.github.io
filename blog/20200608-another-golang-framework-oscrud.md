@@ -4,19 +4,20 @@ author: Oska Ng
 author_title: Maintainer of Oscrud
 author_image_url: https://avatars3.githubusercontent.com/u/15674107?s=400&u=1a548a4df62740cde8c27ad823a3c5851b6b6984&v=4
 author_url: https://github.com/Oskang09
-tags: [oscrud]
+tags: [golang,oscrud,introduction]
 ---
 
 Oscrud is a golang resftul api wrapper framework. The purpose of the framework is make everything independent like transport, authentication, middleware and parser. So we can change the component to what we want anytime without changing code. This framework is inspired from [FeathersJS](https://feathersjs.com/). Mainly the framework is able to work with different library & services. Most of the part can be customizable are transports, service, logger, binder and option for now.
 
 
-## Table Of Contents
+### Table Of Contents
 
-* [Transport](#transport)
-* [Service](#service)
-* [Logger](#logger)
-* [Binder](#binder)
-* [Options](#options)
+- [Table Of Contents](#table-of-contents)
+- [Transport](#transport)
+- [Service](#service)
+- [Logger](#logger)
+- [Binder](#binder)
+- [Options](#options)
 
 
 ### Transport
