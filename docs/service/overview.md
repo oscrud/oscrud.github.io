@@ -12,7 +12,7 @@ Service has 6 action following [CRUD](https://en.wikipedia.org/wiki/Create,_read
 
 * GET /basePath - Service.Find
 * POST /basePath - Service.Create
-* GET /basePath/:$id - Service.Get
-* PUT /basePath/:$id - Service.Update
-* PATCH /basePath/:$id - Service.Patch
-* DELETE /basePath/:$id - Service.Delete
+* GET /basePath/:id - Service.Get
+* PUT /basePath/:id - Service.Update
+* PATCH /basePath/:id - Service.Patch
+* DELETE /basePath/:id - Service.Delete
