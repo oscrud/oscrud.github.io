@@ -59,7 +59,19 @@ module.exports = {
                     ],
                 },
                 {
-                    "Transport": [
+                    "Services": [
+                        {
+                            "Postgres ( go-pg )": [
+                                "package/service/postgres/overview",
+                                "package/service/postgres/pagination",
+                                "package/service/postgres/custom-response",
+                                "package/service/postgres/override-pk"
+                            ],
+                        },
+                    ],
+                },
+                {
+                    "Transports": [
                         "package/transport/websocket/overview",
                     ],
                 },

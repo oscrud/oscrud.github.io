@@ -1,6 +1,6 @@
 ---
-title: Postgres ( go-pg )
-sidebar_label: Postgres ( go-pg )
+title: Overview
+sidebar_label: Overview
 keywords:
 - documentation
 - oscrud
