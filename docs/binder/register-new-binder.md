@@ -11,29 +11,43 @@ description: register new binder to oscrud binder
 Registering new binder for sepcific type ( struct, array or slice ), primitive not supported yet. 
 
 ```go
-type Example struct {
-    Line1 string
-    Line2 string
+package main
+
+import (
+    "log"
+    "fmt"
+    "github.com/oscrud/oscrud-binder"
+)
+
+type AnyStruct struct {
+    Data string
 }
 
 func main() {
-    // You use binder independently also
-    binder := oscrud.NewBinder()
-    binder.Register(new(Example), func(raw interface{}) (interface{}, error) {
-        str := fmt.Sprintf("%v", raw)
-        if strings.Contains(raw, ",") { 
-            split := strings.Split(raw, ",")
-            return Example{raw[0], raw[1]}, nil
-        }
-        return nil, fmt.Errorf("Invalid data "%v" for deserialize to Example", raw)
+    binder := binder.NewBinder()
+    binder.Register(string(""), AnyStruct{}, func(raw interface{}) (interface{}, error) {
+        return AnyStruct{fmt.Sprintf(raw)}
     })
 
-    example := new(Example)
-    err := binder.Bind(&example, "line1,line2")
-    log.Println(example, err) // { line1, line2 }, <nil>
+    binder.Register(AnyStruct{}, string(""), func(raw interface{}) (interface{}, error) {
+        strct := raw.(AnyStruct)
+        return strct.Data
+    })
 
+    strct := new(AnyStruct)
+    if err := binder.Bind(&strct, "will set to data"); err != nil {
+        log.Println(err)
+    }
+    log.Println(strct.Data) // will set to data
 
-    err := binder.Bind(&example, "line1-line2")
-    log.Println(example, err) // nil, "Invalid data line-line2 for deserialize to Example"
+    var str string
+    if err := binder.Bind(&str, strct); err != nil {
+        log.Println(err)
+    }
+    log.Println(str) // will set to data
+
+    if err := binder.Bind(&strct, 10); err != nil {
+        log.Println(err) // Trying to convert 10 to struct AnyStruct
+    }
 }
 ```
