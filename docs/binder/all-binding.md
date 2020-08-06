@@ -8,7 +8,7 @@ keywords:
 description: oscrud binder bind all data
 ---
 
-All binding will bind all possible valus by get key from `reflect.Tag` and retrieve value from all maps, if exists will bind to struct. `oscrud` tag have higher priority then `json` so if `oscrud` tag exists, will take `oscrud` instead of `json`. After having the tag value will try to get value from *header, query, body, param and request-level state*. Binding struct when calling must have addressable, if not will return error `ErrSourceNotAddressable`.
+All binding will bind all possible valus by get key from `reflect.Tag` and retrieve value from all maps, if exists will bind to struct. `oscrud` tag have higher priority then `json` so if `oscrud` tag exists, will take `oscrud` instead of `json`. After having the tag value will try to get value from *header, query, body, param, form and request-level state*. Binding struct when calling must have addressable, if not will return error `ErrSourceNotAddressable`.
 
 ```go
 var i struct {

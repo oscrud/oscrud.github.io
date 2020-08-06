@@ -13,6 +13,7 @@ module.exports = {
                 "server/register-logger",
                 "server/register-endpoint",
                 "server/register-service",
+                "server/group",
                 "server/get-transport",
                 "server/state",
                 "server/manual-log",
