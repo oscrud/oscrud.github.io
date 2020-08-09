@@ -193,6 +193,7 @@ function IndexPage() {
         <>Custom type binding <Link to={useBaseUrl("docs/binder/overview")}>Binder</Link> and able to use independently.</>,
         <>Multiple <Link to={useBaseUrl("docs/transport/overview")}>Transport</Link> in single oscrud.</>,
         <>Register multiple endpoint at once in <Link to={useBaseUrl("docs/service/overview")}>Service</Link>.</>,
+        <>Easy extensible Transport, Handler, Options and Service.</>,
         <>Easy logging in everywhere with core.</>,
         <>Lots of third party library supported.</>,
     ];

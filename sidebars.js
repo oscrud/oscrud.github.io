@@ -73,7 +73,16 @@ module.exports = {
                 },
                 {
                     "Transports": [
-                        "package/transport/websocket/overview",
+                        {
+                            "WebSocket ( Gorilla )": [
+                                "package/transport/websocket/overview",
+                            ]
+                        },
+                        {
+                            "Echo": [
+                                "package/transport/echo/overview",
+                            ]
+                        }
                     ],
                 },
             ],
