@@ -1,12 +1,13 @@
 ---
-title: Websocket
-sidebar_label: Websocket
+title: Overview
+sidebar_label: Overview
 keywords:
 - documentation
 - oscrud
-- websocket
+- http
+- echo
 - transport
-description: readonly websocket transport for oscrud handler
+description: echo transport for oscrud handler
 ---
 
 Http transport for oscrud and build using [echo](https://github.com/labstack/echo).

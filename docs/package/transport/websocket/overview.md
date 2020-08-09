@@ -1,6 +1,6 @@
 ---
-title: Websocket
-sidebar_label: Websocket
+title: Overview
+sidebar_label: Overview
 keywords:
 - documentation
 - oscrud
