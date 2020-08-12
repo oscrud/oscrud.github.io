@@ -13,6 +13,7 @@ description: oscrud request context object
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Method() string                         | Return request method, default to be smaller case `get`, `post`.                                                                                       |
 | Get(key string) interface{}             | Get value by key from  `param`, `query`, `body`, `header`, order respectively.                                                                         |
+| GetState(key string) interface{}        | Get request level state by key                                                                                                                         |
 | Context() context.Context               | Get request context                                                                                                                                    |
 | Transport() TransportID                 | Get transport name                                                                                                                                     |
 | Path() string                           | Return request path                                                                                                                                    |
@@ -27,3 +28,4 @@ description: oscrud request context object
 | BindAll(src interface{}) error          | Bind data from `param`, `query`, `body`, `header`, `state` based on `json` and `qm` tag. More information please look at [All Binding](#all-binding).  |
 | SetState(key string, value interface{}) | Set data to request level state                                                                                                                        |
 | ParseForm(mutlipart bool)               | Parse Form must be called before accessing form data, may not supported in some transport. will throwing error if not supported `ErrFormNotSupported`. |
+| Oscrud() Oscrud                         | Get server core context                                                                                                                                |
