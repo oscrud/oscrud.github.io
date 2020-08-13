@@ -10,6 +10,7 @@ module.exports = {
     plugins: [path.resolve(__dirname, "./node_modules/docusaurus-lunr-search/")],
     themeConfig: {
         navbar: {
+            title: 'Oscrud',
             logo: {
                 alt: "Oscrud",
                 src: "image/favicon.png",
