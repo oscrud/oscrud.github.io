@@ -35,6 +35,47 @@ module.exports = {
             ],
         },
     },
+    footer: {
+        style: 'dark',
+        links: [
+            {
+                title: 'Docs',
+                items: [
+                    {
+                        label: 'Get Started',
+                        to: 'docs/getting-start'
+                    },
+                    {
+                        label: 'Introduction',
+                        to: 'docs/introduction'
+                    }
+                ]
+            },
+            {
+                title: 'Community',
+                items: [
+                    {
+                        label: 'Gitter',
+                        href: 'https://gitter.im/oscrud/community',
+                    }
+                ]
+            },
+            {
+                title: 'Social',
+                items: [
+                    {
+                        label: 'Blog',
+                        to: 'blog'
+                    },
+                    {
+                        label: 'GitHub',
+                        href: 'https://github.com/oscrud/oscud'
+                    }
+                ]
+            }
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} Oscrud developers. Built with Docusaurus. Theme inspired by <a href="https://www.benthos.dev">benthos.dev</a>`
+    },
     presets: [
         [
             "@docusaurus/preset-classic",
