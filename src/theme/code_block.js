@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from 'react'
-
-import useThemeContext from '@theme/hooks/useThemeContext'
-
+import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { duotoneDark, duotoneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { duotoneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 function CodeBlock(props) {
-    const { isDarkTheme } = useThemeContext()
     const { snippet } = props
     return (
-        <SyntaxHighlighter language="go" style={isDarkTheme ? duotoneDark : duotoneLight} showLineNumbers={true}>
+        <SyntaxHighlighter language="go" style={duotoneDark} showLineNumbers={true}>
             {snippet}
         </SyntaxHighlighter>
     )
