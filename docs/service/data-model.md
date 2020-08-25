@@ -11,14 +11,14 @@ description: defining model for service of oscrud server
 
 Service model is a model struct usually will be a table from database. Service model must have implmenet method from `oscrud.DataModel`. So when creating own service, we can use method to filter result or returning data even prevent toxic data injection. `id` tag will automatically assign input value from endpoint, such as `GET /test/:id` for a `Get` action.
 
-| Method                                                | Usage                                                                                                           |
-| ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| ToQuery(Context, ServiceAction) (interface{}, error)  | For returning query syntax based on service requirement, for sqlike is expr cosntruct from their query builder. |
-| ToResult(Context, ServiceAction) (interface{}, error) | For construct model and return for find / get                                                                   |
-| ToUpdate(Context, ServiceModel) error                 | For construct model and return for update                                                                       |
-| ToPatch(Context, ServiceModel) error                  | For construct model and return for patch                                                                        |
-| ToDelete(Context) error                               | For construct model and return for delete                                                                       |
-| ToCreate(Context) error                               | For construct model and return for create                                                                       |
+| Method                                                 | Usage                                                                                                           |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| ToQuery(*Context, ServiceAction) (interface{}, error)  | For returning query syntax based on service requirement, for sqlike is expr cosntruct from their query builder. |
+| ToResult(*Context, ServiceAction) (interface{}, error) | For construct model and return for find / get                                                                   |
+| ToUpdate(*Context, ServiceModel) error                 | For construct model and return for update                                                                       |
+| ToPatch(*Context, ServiceModel) error                  | For construct model and return for patch                                                                        |
+| ToDelete(*Context) error                               | For construct model and return for delete                                                                       |
+| ToCreate(*Context) error                               | For construct model and return for create                                                                       |
 
 
 ```go
