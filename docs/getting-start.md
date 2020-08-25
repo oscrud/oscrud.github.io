@@ -27,7 +27,7 @@ import (
 func main() {
 	server := oscrud.NewOscrud()
 	server.RegisterTransport(e.NewEcho(echo.New()).UsePort(3000))
-	server.RegisterEndpoint("GET", "/test", func(ctx oscrud.Context) oscrud.Context {
+	server.RegisterEndpoint("GET", "/test", func(ctx *oscrud.Context) *oscrud.Context {
 		return ctx.String(200, "Hello World").End()
 	})
 	server.Start()

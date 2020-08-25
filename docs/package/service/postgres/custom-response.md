@@ -39,7 +39,7 @@ func main() {
 	server.Start()
 }
 
-func customResponse(ctx oscrud.Context, result *postgres.ServiceResult, err error) oscrud.Context {
+func customResponse(ctx *oscrud.Context, result *postgres.ServiceResult, err error) *oscrud.Context {
     if err != nil {
         return ctx.Error(http.StatusBadRequest, err)
     }

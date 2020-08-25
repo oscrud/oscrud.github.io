@@ -17,7 +17,7 @@ import (
     "github.com/oscrud/oscrud"
 )
 
-func Example(ctx oscrud.Context) oscrud.Context {
+func Example(ctx *oscrud.Context) *oscrud.Context {
     return ctx.String(200, "Example Handler")
 }
 

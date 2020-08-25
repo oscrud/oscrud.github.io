@@ -28,3 +28,4 @@ description: oscrud request context object
 | BindAll(src interface{}) error          | Bind data from `param`, `query`, `body`, `header`, `state` based on `json` and `qm` tag. More information please look at [All Binding](#all-binding).  |
 | SetState(key string, value interface{}) | Set data to request level state                                                                                                                        |
 | ParseForm(mutlipart bool)               | Parse Form must be called before accessing form data, may not supported in some transport. will throwing error if not supported `ErrFormNotSupported`. |
+| Task(func() error) *Context             | Run a function in go routine with error handling                                                                                                       |

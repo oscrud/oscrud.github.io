@@ -13,7 +13,7 @@ Event options is for applying event-driven functionality, like `OnComplete`. For
 
 ```go
 event := oscrud.EventOptions{
-	OnComplete: func(ctx oscrud.Context) {
+	OnComplete: func(ctx *oscrud.Context) {
 		log.Println("This running from go-routine as event-drive OnComplete().")
 	},
 }

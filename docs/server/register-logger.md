@@ -24,7 +24,7 @@ func (l Logger) Log(operation string, content string) {
 }
 
 // StartRequest :
-func (l Logger) StartRequest(ctx oscrud.Context) {
+func (l Logger) StartRequest(ctx *oscrud.Context) {
 	log.Println("**************************************")
 	log.Println("RequestID - ", ctx.RequestID())
 	log.Println("Method - ", ctx.Method())
@@ -37,7 +37,7 @@ func (l Logger) StartRequest(ctx oscrud.Context) {
 }
 
 // EndRequest :
-func (l Logger) EndRequest(ctx oscrud.Context) {
+func (l Logger) EndRequest(ctx *oscrud.Context) {
 	log.Println("**************************************")
 	log.Println("RequestID - ", ctx.RequestID())
 	log.Println("Method - ", ctx.Method())

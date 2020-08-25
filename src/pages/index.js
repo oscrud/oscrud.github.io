@@ -20,7 +20,7 @@ import (
     "github.com/oscrud/oscrud"
 )
 
-func Example(ctx oscrud.Context) oscrud.Context {
+func Example(ctx *oscrud.Context) *oscrud.Context {
     return ctx.String(200, "Example Handler")
 }
 
@@ -41,7 +41,7 @@ import (
     "github.com/oscrud/oscrud"
 )
 
-func Example(ctx oscrud.Context) oscrud.Context {
+func Example(ctx *oscrud.Context) *oscrud.Context {
     var i struct {
         Data string \`json:"data"\`
         Data2 string \`oscrud:"data2"\`
@@ -88,7 +88,7 @@ type User struct {
 }
 
 // ToCreate :
-func (user *User) ToCreate(ctx oscrud.Context) error {
+func (user *User) ToCreate(ctx *oscrud.Context) error {
     if len(user.Name) > 20 {
         return errors.New("username have a maximum length 20")
     }
@@ -96,31 +96,31 @@ func (user *User) ToCreate(ctx oscrud.Context) error {
 }
 
 // ToResult :
-func (user *User) ToResult(ctx oscrud.Context, action oscrud.ServiceAction) (interface{}, error) {
+func (user *User) ToResult(ctx *oscrud.Context, action oscrud.ServiceAction) (interface{}, error) {
     return user, nil
 }
 
 // ToQuery :
-func (user *User) ToQuery(ctx oscrud.Context, action oscrud.ServiceAction) (interface{}, error) {
+func (user *User) ToQuery(ctx *oscrud.Context, action oscrud.ServiceAction) (interface{}, error) {
     return user, nil
 }
 
 // ToPatch :
-func (user *User) ToPatch(ctx oscrud.Context, incoming oscrud.ServiceModel) error {
+func (user *User) ToPatch(ctx *oscrud.Context, incoming oscrud.ServiceModel) error {
     incomingUser := incoming.(*User)
     user.Name = incomingUser.Name
     return nil
 }
 
 // ToUpdate :
-func (user *User) ToUpdate(ctx oscrud.Context, incoming oscrud.ServiceModel) error {
+func (user *User) ToUpdate(ctx *oscrud.Context, incoming oscrud.ServiceModel) error {
     incomingUser := incoming.(*User)
     user.Name = incomingUser.Name
     return nil
 }
 
 // ToDelete :
-func (user *User) ToDelete(ctx oscrud.Context) error {
+func (user *User) ToDelete(ctx *oscrud.Context) error {
     return nil
 }`
     }

@@ -57,27 +57,27 @@ For creating own service, must implement the interface have been defined in `osc
 
 ```go
 type Service struct {}
-func (service Service) Create(ctx oscrud.Context) oscrud.Context {
+func (service Service) Create(ctx *oscrud.Context) *oscrud.Context {
 	// Createing data
 }
 
-func (service Service) Find(ctx oscrud.Context) oscrud.Context {
+func (service Service) Find(ctx *oscrud.Context) *oscrud.Context {
 	// List data
 }
 
-func (service Service) Get(ctx oscrud.Context) oscrud.Context {
+func (service Service) Get(ctx *oscrud.Context) *oscrud.Context {
 	// Get data ( should be one result always )
 }
 
-func (service Service) Update(ctx oscrud.Context) oscrud.Context {
+func (service Service) Update(ctx *oscrud.Context) *oscrud.Context {
 	// update data
 }
 
-func (service Service) Patch(ctx oscrud.Context) oscrud.Context {
+func (service Service) Patch(ctx *oscrud.Context) *oscrud.Context {
 	// patch data
 }
 
-func (service Service) Delete(ctx oscrud.Context) oscrud.Context {
+func (service Service) Delete(ctx *oscrud.Context) *oscrud.Context {
 	// delete data
 }
 ```
@@ -160,7 +160,7 @@ func (l Logger) Log(operation string, content string) {
 }
 
 // StartRequest :
-func (l Logger) StartRequest(ctx oscrud.Context) {
+func (l Logger) StartRequest(ctx *oscrud.Context) {
 	log.Println("**************************************")
 	log.Println("RequestID - ", ctx.RequestID())
 	log.Println("Method - ", ctx.Method())
@@ -173,7 +173,7 @@ func (l Logger) StartRequest(ctx oscrud.Context) {
 }
 
 // EndRequest :
-func (l Logger) EndRequest(ctx oscrud.Context) {
+func (l Logger) EndRequest(ctx *oscrud.Context) {
 	log.Println("**************************************")
 	log.Println("RequestID - ", ctx.RequestID())
 	log.Println("Method - ", ctx.Method())
@@ -285,14 +285,14 @@ package oscrud
 server := oscrud.NewOscrud()
 middleware := oscrud.MiddlewareOptions{
 	Before: []oscrud.Handler{
-        func(ctx oscrud.Context) oscrud.Context {
+        func(ctx *oscrud.Context) *oscrud.Context {
             log.Println("I'm Before Middleware")
             return ctx
         }
     },
 }
 event := oscrud.EventOptions{
-    OnComplete: func(ctx oscrud.Context) {
+    OnComplete: func(ctx *oscrud.Context) {
         log.Println("This running from go-routine as event-drive OnComplete().")
     },
 }
@@ -301,7 +301,7 @@ event := oscrud.EventOptions{
 server.UseOptions(middleware, event)
 
 // Also work with endpoint only
-server.RegisterEndpoint("GET", "/test", func(ctx oscrud.Context) oscrud.Context {
+server.RegisterEndpoint("GET", "/test", func(ctx *oscrud.Context) *oscrud.Context {
 		return ctx.String(200, "Hello World").End()
 }, middleware, event)
 ```

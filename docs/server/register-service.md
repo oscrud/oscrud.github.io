@@ -25,7 +25,7 @@ func main() {
 	server := oscrud.NewOscrud()
     middleware := oscrud.MiddlewareOptions{
         Before: []oscrud.Handler{
-            func(ctx oscrud.Context) oscrud.Context {
+            func(ctx *oscrud.Context) *oscrud.Context {
                 log.Println("I'm Before Middleware")
                 return ctx
             }
