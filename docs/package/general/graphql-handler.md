@@ -36,10 +36,8 @@ import (
 
 func main() {
     schema := // graphql schema
-
     server := oscrud.NewServer()
     server.RegisterEndpoint("GET", "/graphql", gh.Handler(schema))
-
     server.Start()
 }
 
