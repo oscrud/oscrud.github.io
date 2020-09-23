@@ -48,6 +48,7 @@ module.exports = {
                 "binder/all-binding",
                 "binder/specific-binding"
             ],
+            "Logger": [],
             "Reference": [
                 "reference/content-type",
                 "reference/error-list",
