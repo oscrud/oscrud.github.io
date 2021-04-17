@@ -16,7 +16,7 @@ $ go get -u github.com/oscrud/core
 $ go install github.com/oscrud/core/oscrud
 ```
 
-After complete installation, you can Go with a simple boilerplate generate by CLI using `oscrud generate`. Once generated you can start your application in development mode with simple `oscrud dev`. 
+After complete installation, you can Go with a simple [scaffold](https://github.com/oscrud/scaffold). Once cloned you can start your application in development mode with simple `oscrud dev`. 
 
 ```go
 package main
