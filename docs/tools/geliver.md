@@ -15,9 +15,6 @@ Frontend UI Tool for connection oscrud application, and come with some features.
 | --------------------------------------- | ---------------------------------------------------------------------------------------- |
 | ![Geliver](/image/geliver-web.png)      | ![Geliver](/image/geliver-vscode.png)                                                    |
 
-# Installation
-
-
 # Typed Endpoints
 
 All endpoints will automatically imports when selected oscrud server. You can reload to update if u adding new endpoints to the server.
