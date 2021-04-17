@@ -1,7 +1,7 @@
 const path = require("path");
 module.exports = {
     title: "Oscrud",
-    tagline: "Golang Restful API Wrapper Framework",
+    tagline: "Golang GRPC + JSON Framework",
     url: "https://oscrud.github.io",
     organizationName: "oscrud",
     projectName: "oscrud.github.io",
@@ -55,8 +55,7 @@ module.exports = {
                     title: 'Community',
                     items: [
                         {
-                            label: 'Gitter',
-                            href: 'https://gitter.im/oscrud/community',
+                            label: 'Pending',
                         }
                     ]
                 },
@@ -69,7 +68,7 @@ module.exports = {
                         },
                         {
                             label: 'GitHub',
-                            href: 'https://github.com/oscrud/oscud'
+                            href: 'https://github.com/oscrud'
                         }
                     ]
                 }

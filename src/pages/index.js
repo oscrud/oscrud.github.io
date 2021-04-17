@@ -14,116 +14,41 @@ import styles from './index.module.css';
 const snippets = [
     {
         label: 'Handler',
-        code: `package main
+        code: `package service
 
 import (
-    "github.com/oscrud/oscrud"
+    "context"
+    "errors"
+
+    "github.com/oscrud/scaffold/model"
 )
 
-func Example(ctx *oscrud.Context) *oscrud.Context {
-    return ctx.String(200, "Example Handler")
+// ExampleRequest :
+type ExampleRequest struct {
+    Name  string \`json: "name"\`
+    Error bool   \`json: "error"\`
 }
 
-func main() {
-    server := oscrud.NewOscrud()
-    server.RegisterEndpoint("GET", "/example", Example)
-    
-    group := server.Group("/v1")
-    group.RegisterEndpoint("GET", "/example", Example) // registered at /v1/example
-    server.Start()
-}`
-    },
-    {
-        label: 'Data Binding',
-        code: `package main
+// ExampleResponse :
+type ExampleResponse struct {
+    Result model.User \`json: "result"\`
+}
 
-import (
-    "github.com/oscrud/oscrud"
+// Errors :
+var (
+    ExampleErrorRequest = errors.New("example of error retusrns")
 )
 
-func Example(ctx *oscrud.Context) *oscrud.Context {
-    var i struct {
-        Data string \`json:"data"\`
-        Data2 string \`oscrud:"data2"\`
+// Example :
+func (srv ExampleService) Example(ctx context.Context, req *ExampleRequest) (*ExampleResponse, error) {
+    if req.Error {
+        return nil, ExampleErrorRequest
     }
-
-    if err := ctx.BindAll(&i); err != nil {
-        return ctx.Error(400, err)
-    }
-    return ctx.String(200, "Example Handler")
-}
-
-func main() {
-    server := oscrud.NewOscrud()
-    server.RegisterEndpoint("GET", "/example", Example)
-    server.Start()
+    response := new(ExampleResponse)
+    response.Result = model.User{Name: req.Name}
+    return response, nil
 }`
     },
-    {
-        label: 'Custom Binder',
-        code: `package main
-
-import (
-    "github.com/oscrud/oscrud"
-)
-
-func main() {
-    server := oscrud.NewOscrud()
-    server.RegisterBinder(
-        string(""),
-        time.Time{},
-        func(raw interface{}) (interface{}, error) {
-            text := raw.(string)
-            return time.Parse("2006-01-02", text)
-        },
-    )
-}`,
-    },
-    {
-        label: 'Service Model',
-        code: `// User :
-type User struct {
-    ID   int    \`json:"id" oscrud:"id"\`
-    Name string \`json:"name"\`
-}
-
-// ToCreate :
-func (user *User) ToCreate(ctx *oscrud.Context) error {
-    if len(user.Name) > 20 {
-        return errors.New("username have a maximum length 20")
-    }
-    return nil
-}
-
-// ToResult :
-func (user *User) ToResult(ctx *oscrud.Context, action oscrud.ServiceAction) (interface{}, error) {
-    return user, nil
-}
-
-// ToQuery :
-func (user *User) ToQuery(ctx *oscrud.Context, action oscrud.ServiceAction) (interface{}, error) {
-    return user, nil
-}
-
-// ToPatch :
-func (user *User) ToPatch(ctx *oscrud.Context, incoming oscrud.ServiceModel) error {
-    incomingUser := incoming.(*User)
-    user.Name = incomingUser.Name
-    return nil
-}
-
-// ToUpdate :
-func (user *User) ToUpdate(ctx *oscrud.Context, incoming oscrud.ServiceModel) error {
-    incomingUser := incoming.(*User)
-    user.Name = incomingUser.Name
-    return nil
-}
-
-// ToDelete :
-func (user *User) ToDelete(ctx *oscrud.Context) error {
-    return nil
-}`
-    }
 ];
 
 const features = [
@@ -188,19 +113,18 @@ function IndexPage() {
     const context = useDocusaurusContext()
     const { siteConfig } = context;
     const mainFeatures = [
-        <>Centralized core and shared across components.</>,
-        <>Easy binding incoming data with single tag.</>,
-        <>Custom type binding <Link to={useBaseUrl("docs/binder/overview")}>Binder</Link> and able to use independently.</>,
-        <>Multiple <Link to={useBaseUrl("docs/transport/overview")}>Transport</Link> in single oscrud.</>,
-        <>Register multiple endpoint at once in <Link to={useBaseUrl("docs/service/overview")}>Service</Link>.</>,
-        <>Easy extensible Transport, Handler, Options and Service.</>,
-        <>Easy logging in everywhere with core.</>,
-        <>Lots of third party library supported.</>,
+        <>Communicated via GRPC + JSON.</>,
+        <>Auto generated client code.</>,
+        <>Built-in <Link to={useBaseUrl("docs/tools/geliver")}>development tools</Link>.</>,
+        <>Built-in <Link to={useBaseUrl("docs/tools/command-line")}>command line interface</Link>.</>,
+        <>Middleware pre-post request handler.</>,
+        <>Standardize handler code.</>,
+        <>Write unit test easily with go built-in test</>,
     ];
     return (
         <Layout
-            title="Oscrud | Golang Restful API Wrappper"
-            description="golang resftul api wrapper framework"
+            title="Oscrud | Golang GPRC + JSON Framework"
+            description="golang grpc + json framework"
             keywords={["oscrud", "golang", "framework"]}
         >
             {/* Headers */}
@@ -234,9 +158,7 @@ function IndexPage() {
                     <div className='row'>
                         {/* Main Features */}
                         <div className={classnames(`${styles.pitch} col col--6`)}>
-                            <h2>
-                                A wrapper framework, plug and play, more customization
-                            </h2>
+                            <h2>A grpc + json framework</h2>
                             <p>Main Features:</p>
                             <ul>
                                 {mainFeatures.map(feature => <li>{feature}</li>)}
