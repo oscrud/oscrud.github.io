@@ -26,9 +26,18 @@ import (
 )
 
 func main() {
-	oscrud := oscrud.NewOscrud() 
-	oscrud.Register(new(Service))
-	oscrud.UseDevServer("some_secret_password")
+	options := &oscrud.DevServerOptions{
+		Password: "some_secret_password",
+		RequestMarshaler: func(name string, rType reflect.Type) []byte {
+			rValue := reflect.New(rType)
+			message := rValue.Interface()
+			str, _ := json.Marshal(message)
+			return str
+		},
+	}
+	oscrud := oscrud.NewOscrud()
+	oscrud.Register(new(service.ExampleService))
+	oscrud.UseDevServer(options)
 	oscrud.Start()
 }
 ```
